@@ -1,5 +1,5 @@
-import C_to_F from './temperature_utility'
-import F_to_C from './temperature_utility'
+const C_to_F = require('./temperature_utility').C_to_F;
+const F_to_C = require('./temperature_utility').F_to_C;
 
 let readlineSync = require('readline-sync');
 

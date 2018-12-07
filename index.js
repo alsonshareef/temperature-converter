@@ -11,15 +11,17 @@ const F_to_C = (F) => {
 }
 
 // Select whether to convert from C => F || F => C
-let chooseConversion = ['Celcius', 'Farenhiet'];
+let chooseConversion = ['Celcius to Fahrenheit', 'Fahrenheit to Celcius'];
 let index = readlineSync.keyInSelect(chooseConversion, 'Hi there, what type of conversion are you looking to do?');
 
-if (index === 'Celcius') {
-    
+if (index === 0) {
+    let input = readlineSync.question('Please enter the degrees in Celcius: ')
+    console.log(C_to_F(input))
+} else if (index === 1) {
+    let input = readlineSync.question('Please enter the degrees in Fahrenheit: ')
+    console.log(F_to_C(input))
 } else {
-    
+    console.log('bye')
 }
 
-// Take an input of the degree
-// Run the calculation to convert
-// Output the result and redirect to menu
+// Redirect to Menu
